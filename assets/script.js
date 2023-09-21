@@ -53,11 +53,11 @@ addDots();
 carroussel(activeSlide);
 
 arrowLeft.addEventListener("click", () => {
-  activeSlide === 0 ? (activeSlide = 3) : (activeSlide -= 1);
+  activeSlide === 0 ? (activeSlide = slides.length-1) : (activeSlide -= 1);
   carroussel(activeSlide);
 });
 
 arrowRight.addEventListener("click", () => {
-  activeSlide === 3 ? (activeSlide = 0) : (activeSlide += 1);
+  activeSlide === slides.length-1 ? (activeSlide = 0) : (activeSlide += 1);
   carroussel(activeSlide);
 });
